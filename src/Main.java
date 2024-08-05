@@ -1,7 +1,6 @@
-
 public class Main {
     public static void main(String[] args) {
-
+      
         FileBackedTasksManager fileBackedTasksManager = new FileBackedTasksManager("C:\\Users\\tasca\\dev\\Sprint_6_FP\\java-kanban_FP6\\TasksForSP7.csv");
 
         System.out.println("------------------------------------------");

@@ -61,6 +61,7 @@ public class InMemoryTaskManager implements TaskManager{
     }
 
     @Override
+
     public void updateTask(Task task, Integer id){
         hashOfTasks.put(id, task);
     }
