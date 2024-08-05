@@ -1,10 +1,3 @@
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,6 +6,7 @@ public class Main {
 
         System.out.println("------------------------------------------");
         fileBackedTasksManager.readTasksFromFile(); // Загружвем задачи из пустого файла
+        // при повторном запуске это будет тест считывание тасков из файлов в оперативную память
         // и выводим на экран все задачи прочитанные из файла(пример работы с пустым файлом)
 
         for (Task task : fileBackedTasksManager.getTaskList()) {
@@ -28,7 +22,6 @@ public class Main {
 
         System.out.println("All epics printed!");
         System.out.println();
-
 
         for (Task task : fileBackedTasksManager.getSubtaskList()) {
             System.out.println(task);
@@ -68,7 +61,5 @@ public class Main {
         fileBackedTasksManager.removeTaskByID(1); //удаляем task
         fileBackedTasksManager.removeSubtaskByID(9); //удаляем Subtask
         fileBackedTasksManager.removeEpicByID(3); //удаляем Epic
-
-
     }
 }
